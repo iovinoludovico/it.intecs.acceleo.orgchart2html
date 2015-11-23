@@ -1,0 +1,995 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="generate" nsURI="it::intecs::acceleo::orgchart2html::main::generate" startHeaderPosition="29" endHeaderPosition="158">
+    <input>
+      <takesTypesFrom href="http://www.disim.univaq.it/orgchart#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateElement" visibility="Public" main="true">
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;html> &#xA;  &lt;head>&#xA;    &lt;script type='text/javascript' src='https://www.google.com/jsapi'>&lt;/script>&#xA;    &lt;script type='text/javascript'>&#xA;      google.load('visualization', '1', {packages: "/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="'orgchart' "/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="});&#xA;      google.setOnLoadCallback(drawChart);&#xA;      function drawChart() {&#xA;        var data = new google.visualization.DataTable();&#xA;        data.addColumn('string', 'Name');&#xA;        data.addColumn('string', 'Manager');&#xA;        data.addColumn('string', 'ToolTip');&#xA;        data.addRows( "/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;        "/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="{v:'"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aPresident" referredVariable="/0/generateElement/aPresident">
+            <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//President"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.disim.univaq.it/orgchart#//NamedElement/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="', f:'"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aPresident" referredVariable="/0/generateElement/aPresident">
+            <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//President"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.disim.univaq.it/orgchart#//NamedElement/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;div style=&quot;color:red; font-style:italic&quot;>President&lt;/div>'}, '', 'The President'"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=",&#xA;"/>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;      "/>
+          <body xsi:type="mtl:TemplateInvocation" definition="/0/generateSubMembers">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="subemp" referredVariable="/0/generateElement/%/%.15/subemp">
+              <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+          <loopVariable name="subemp">
+            <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/15/OrderedSet(Member)">
+            <source xsi:type="ocl.ecore:VariableExp" name="aPresident" referredVariable="/0/generateElement/aPresident">
+              <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//President"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.disim.univaq.it/orgchart#//Member/subemployees"/>
+          </iterSet>
+          <each xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=",">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </each>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;&#x9;);&#xA;        var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));&#xA;        chart.draw(data, {allowHtml:true});&#xA;      }&#xA;    &lt;/script>&#xA;  &lt;/head>&#xA;  &lt;body>&lt;center>&lt;h2>"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aPresident" referredVariable="/0/generateElement/aPresident">
+            <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//President"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.disim.univaq.it/orgchart#//President/companyName"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" Orgchart&lt;/h2>&lt;/center>&lt;div id='chart_div'>&lt;/div>&lt;/body>&#xA;&lt;/html>&#xA;"/>
+        <fileUrl xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aPresident" referredVariable="/0/generateElement/aPresident">
+              <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//President"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.disim.univaq.it/orgchart#//President/companyName"/>
+          </source>
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".html">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/concat"/>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <parameter name="aPresident">
+        <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//President"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateSubMembers" visibility="Public">
+      <body xsi:type="mtl:IfBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="{v:'"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generateSubMembers/m">
+            <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.disim.univaq.it/orgchart#//NamedElement/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="', f:'"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generateSubMembers/m">
+            <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.disim.univaq.it/orgchart#//NamedElement/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;div style=&quot;color:red; font-style:italic&quot;>"/>
+        <body xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_OclAny_Class/toString">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EEnum" href="http://www.disim.univaq.it/orgchart#//Role"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generateSubMembers/m">
+              <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.disim.univaq.it/orgchart#//Member/role"/>
+          </source>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/div>'}, '"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generateSubMembers/m">
+              <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.disim.univaq.it/orgchart#//Member/boss"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.disim.univaq.it/orgchart#//NamedElement/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="', &#xA;'"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generateSubMembers/m">
+            <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.disim.univaq.it/orgchart#//Member/address"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="'"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=",&#xA;"/>
+        <body xsi:type="mtl:ForBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;"/>
+          <body xsi:type="mtl:TemplateInvocation" definition="/0/generateSubMembers">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="subm" referredVariable="/0/generateSubMembers/%/%.14/subm">
+              <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+            </argument>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+          <loopVariable name="subm">
+            <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+          </loopVariable>
+          <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/15/OrderedSet(Member)">
+            <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generateSubMembers/m">
+              <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.disim.univaq.it/orgchart#//Member/subemployees"/>
+          </iterSet>
+          <each xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=",">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </each>
+        </body>
+        <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp" eType="/15/OrderedSet(Member)">
+              <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generateSubMembers/m">
+                <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.disim.univaq.it/orgchart#//Member/subemployees"/>
+            </source>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)_Class/size"/>
+          </source>
+          <argument xsi:type="ocl.ecore:IntegerLiteralExp" integerSymbol="0">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer_Class/%3E"/>
+        </ifExpr>
+        <else>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="{v:'"/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generateSubMembers/m">
+              <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.disim.univaq.it/orgchart#//NamedElement/name"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="', f:'"/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generateSubMembers/m">
+              <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.disim.univaq.it/orgchart#//NamedElement/name"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;div style=&quot;color:red; font-style:italic&quot;>"/>
+          <body xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_OclAny_Class/toString">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EEnum" href="http://www.disim.univaq.it/orgchart#//Role"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generateSubMembers/m">
+                <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://www.disim.univaq.it/orgchart#//Member/role"/>
+            </source>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/div>'}, '"/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generateSubMembers/m">
+                <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.disim.univaq.it/orgchart#//Member/boss"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.disim.univaq.it/orgchart#//NamedElement/name"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="',&#xA; '"/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="m" referredVariable="/0/generateSubMembers/m">
+              <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.disim.univaq.it/orgchart#//Member/address"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="'"/>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="     &#xA;"/>
+        </else>
+      </body>
+      <parameter name="m">
+        <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+      </parameter>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="generateElement">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateElement"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aPresident">
+          <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//President"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateSubMembers">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateSubMembers"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="m">
+          <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+      <eOperations name="toString">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="orgchart_President_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.disim.univaq.it/orgchart#//President"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="orgchart_Member_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.disim.univaq.it/orgchart#//Member"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//President"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//President"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//President"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//President"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//President"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//President"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//President"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//President"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//President"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//President"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//President"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Member)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//President"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//President"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//President"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//President"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//President"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.disim.univaq.it/orgchart#//Member"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/generateElement">
+      <details key="start" value="86"/>
+      <details key="end" value="1323"/>
+      <details key="line" value="3"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateElement/%">
+      <details key="start" value="162"/>
+      <details key="end" value="1311"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateElement/%/%">
+      <details key="start" value="226"/>
+      <details key="end" value="410"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateElement/%/%.1">
+      <details key="start" value="412"/>
+      <details key="end" value="415"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateElement/%/%.2">
+      <details key="start" value="418"/>
+      <details key="end" value="429"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateElement/%/%.3">
+      <details key="start" value="431"/>
+      <details key="end" value="434"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateElement/%/%.4">
+      <details key="start" value="437"/>
+      <details key="end" value="724"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateElement/%/%.5">
+      <details key="start" value="726"/>
+      <details key="end" value="729"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateElement/%/%.6">
+      <details key="start" value="732"/>
+      <details key="end" value="741"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateElement/%/%.7">
+      <details key="start" value="743"/>
+      <details key="end" value="746"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateElement/%/%.8">
+      <details key="start" value="749"/>
+      <details key="end" value="753"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateElement/%/%.9">
+      <details key="start" value="754"/>
+      <details key="end" value="769"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateElement/%/%.9/aPresident">
+      <details key="start" value="754"/>
+      <details key="end" value="764"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateElement/%/%.10">
+      <details key="start" value="771"/>
+      <details key="end" value="777"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateElement/%/%.11">
+      <details key="start" value="778"/>
+      <details key="end" value="793"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateElement/%/%.11/aPresident">
+      <details key="start" value="778"/>
+      <details key="end" value="788"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generateElement/%/%.12">
+      <details key="start" value="795"/>
+      <details key="end" value="875"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/generateElement/%/%.13">
+      <details key="start" value="877"/>
+      <details key="end" value="880"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/generateElement/%/%.14">
+      <details key="start" value="883"/>
+      <details key="end" value="885"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/generateElement/%/%.15">
+      <details key="start" value="892"/>
+      <details key="end" value="1008"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/generateElement/%/%.15/%">
+      <details key="start" value="958"/>
+      <details key="end" value="965"/>
+      <details key="line" value="20"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/generateElement/%/%.15/%.1">
+      <details key="start" value="966"/>
+      <details key="end" value="992"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/generateElement/%/%.15/%.1/subemp">
+      <details key="start" value="985"/>
+      <details key="end" value="991"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/generateElement/%/%.15/%.2">
+      <details key="start" value="994"/>
+      <details key="end" value="995"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/generateElement/%/%.15/subemp">
+      <details key="start" value="898"/>
+      <details key="end" value="913"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/generateElement/%/%.15/%.3">
+      <details key="start" value="916"/>
+      <details key="end" value="939"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/generateElement/%/%.15/%.3/aPresident">
+      <details key="start" value="916"/>
+      <details key="end" value="926"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/generateElement/%/%.15/%.4">
+      <details key="start" value="952"/>
+      <details key="end" value="955"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/generateElement/%/%.16">
+      <details key="start" value="1009"/>
+      <details key="end" value="1011"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/generateElement/%/%.17">
+      <details key="start" value="1013"/>
+      <details key="end" value="1016"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/generateElement/%/%.18">
+      <details key="start" value="1019"/>
+      <details key="end" value="1214"/>
+      <details key="line" value="23"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/generateElement/%/%.19">
+      <details key="start" value="1215"/>
+      <details key="end" value="1237"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/generateElement/%/%.19/aPresident">
+      <details key="start" value="1215"/>
+      <details key="end" value="1225"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/generateElement/%/%.20">
+      <details key="start" value="1239"/>
+      <details key="end" value="1304"/>
+      <details key="line" value="29"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/generateElement/%/%.21">
+      <details key="start" value="169"/>
+      <details key="end" value="207"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/generateElement/%/%.21/%">
+      <details key="start" value="169"/>
+      <details key="end" value="191"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/generateElement/%/%.21/%/aPresident">
+      <details key="start" value="169"/>
+      <details key="end" value="179"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/generateElement/%/%.21/%.1">
+      <details key="start" value="199"/>
+      <details key="end" value="206"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/generateElement/%/%.22">
+      <details key="start" value="216"/>
+      <details key="end" value="223"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/generateElement/aPresident">
+      <details key="start" value="119"/>
+      <details key="end" value="141"/>
+      <details key="line" value="3"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/generateSubMembers">
+      <details key="start" value="1324"/>
+      <details key="end" value="1830"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/generateSubMembers/%">
+      <details key="start" value="1373"/>
+      <details key="end" value="1818"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/generateSubMembers/%/%">
+      <details key="start" value="1407"/>
+      <details key="end" value="1410"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/generateSubMembers/%/%.1">
+      <details key="start" value="1413"/>
+      <details key="end" value="1417"/>
+      <details key="line" value="35"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/generateSubMembers/%/%.2">
+      <details key="start" value="1418"/>
+      <details key="end" value="1424"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/generateSubMembers/%/%.2/m">
+      <details key="start" value="1418"/>
+      <details key="end" value="1419"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/generateSubMembers/%/%.3">
+      <details key="start" value="1426"/>
+      <details key="end" value="1432"/>
+      <details key="line" value="35"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/generateSubMembers/%/%.4">
+      <details key="start" value="1433"/>
+      <details key="end" value="1439"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/generateSubMembers/%/%.4/m">
+      <details key="start" value="1433"/>
+      <details key="end" value="1434"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/generateSubMembers/%/%.5">
+      <details key="start" value="1441"/>
+      <details key="end" value="1483"/>
+      <details key="line" value="35"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/generateSubMembers/%/%.6">
+      <details key="start" value="1484"/>
+      <details key="end" value="1501"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/generateSubMembers/%/%.6/%">
+      <details key="start" value="1484"/>
+      <details key="end" value="1490"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/generateSubMembers/%/%.6/%/m">
+      <details key="start" value="1484"/>
+      <details key="end" value="1485"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/generateSubMembers/%/%.7">
+      <details key="start" value="1503"/>
+      <details key="end" value="1514"/>
+      <details key="line" value="35"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/generateSubMembers/%/%.8">
+      <details key="start" value="1515"/>
+      <details key="end" value="1526"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/generateSubMembers/%/%.8/%">
+      <details key="start" value="1515"/>
+      <details key="end" value="1521"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/generateSubMembers/%/%.8/%/m">
+      <details key="start" value="1515"/>
+      <details key="end" value="1516"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/generateSubMembers/%/%.9">
+      <details key="start" value="1528"/>
+      <details key="end" value="1533"/>
+      <details key="line" value="35"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/generateSubMembers/%/%.10">
+      <details key="start" value="1534"/>
+      <details key="end" value="1543"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/generateSubMembers/%/%.10/m">
+      <details key="start" value="1534"/>
+      <details key="end" value="1535"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/generateSubMembers/%/%.11">
+      <details key="start" value="1545"/>
+      <details key="end" value="1546"/>
+      <details key="line" value="36"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/generateSubMembers/%/%.12">
+      <details key="start" value="1548"/>
+      <details key="end" value="1551"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/generateSubMembers/%/%.13">
+      <details key="start" value="1554"/>
+      <details key="end" value="1556"/>
+      <details key="line" value="36"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/generateSubMembers/%/%.14">
+      <details key="start" value="1557"/>
+      <details key="end" value="1649"/>
+      <details key="line" value="37"/>
+    </eAnnotations>
+    <eAnnotations source="positions.64" references="/0/generateSubMembers/%/%.14/%">
+      <details key="start" value="1612"/>
+      <details key="end" value="1614"/>
+      <details key="line" value="38"/>
+    </eAnnotations>
+    <eAnnotations source="positions.65" references="/0/generateSubMembers/%/%.14/%.1">
+      <details key="start" value="1615"/>
+      <details key="end" value="1639"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.66" references="/0/generateSubMembers/%/%.14/%.1/subm">
+      <details key="start" value="1634"/>
+      <details key="end" value="1638"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/generateSubMembers/%/%.14/%.2">
+      <details key="start" value="1641"/>
+      <details key="end" value="1642"/>
+      <details key="line" value="39"/>
+    </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/generateSubMembers/%/%.14/subm">
+      <details key="start" value="1563"/>
+      <details key="end" value="1576"/>
+      <details key="line" value="37"/>
+    </eAnnotations>
+    <eAnnotations source="positions.69" references="/0/generateSubMembers/%/%.14/%.3">
+      <details key="start" value="1579"/>
+      <details key="end" value="1593"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.70" references="/0/generateSubMembers/%/%.14/%.3/m">
+      <details key="start" value="1579"/>
+      <details key="end" value="1580"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.71" references="/0/generateSubMembers/%/%.14/%.4">
+      <details key="start" value="1606"/>
+      <details key="end" value="1609"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.72" references="/0/generateSubMembers/%/%.15">
+      <details key="start" value="1377"/>
+      <details key="end" value="1403"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.73" references="/0/generateSubMembers/%/%.15/%">
+      <details key="start" value="1378"/>
+      <details key="end" value="1400"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.74" references="/0/generateSubMembers/%/%.15/%/%">
+      <details key="start" value="1378"/>
+      <details key="end" value="1392"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.75" references="/0/generateSubMembers/%/%.15/%/%/m">
+      <details key="start" value="1378"/>
+      <details key="end" value="1379"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.76" references="/0/generateSubMembers/%/%.15/%.1">
+      <details key="start" value="1401"/>
+      <details key="end" value="1402"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.77" references="/0/generateSubMembers/%/%.16">
+      <details key="start" value="1650"/>
+      <details key="end" value="1813"/>
+      <details key="line" value="40"/>
+    </eAnnotations>
+    <eAnnotations source="positions.78" references="/0/generateSubMembers/%/%.16/%">
+      <details key="start" value="1657"/>
+      <details key="end" value="1658"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.79" references="/0/generateSubMembers/%/%.16/%.1">
+      <details key="start" value="1660"/>
+      <details key="end" value="1663"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.80" references="/0/generateSubMembers/%/%.16/%.2">
+      <details key="start" value="1666"/>
+      <details key="end" value="1670"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.81" references="/0/generateSubMembers/%/%.16/%.3">
+      <details key="start" value="1671"/>
+      <details key="end" value="1677"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.82" references="/0/generateSubMembers/%/%.16/%.3/m">
+      <details key="start" value="1671"/>
+      <details key="end" value="1672"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.83" references="/0/generateSubMembers/%/%.16/%.4">
+      <details key="start" value="1679"/>
+      <details key="end" value="1685"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.84" references="/0/generateSubMembers/%/%.16/%.5">
+      <details key="start" value="1686"/>
+      <details key="end" value="1692"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.85" references="/0/generateSubMembers/%/%.16/%.5/m">
+      <details key="start" value="1686"/>
+      <details key="end" value="1687"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.86" references="/0/generateSubMembers/%/%.16/%.6">
+      <details key="start" value="1694"/>
+      <details key="end" value="1736"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.87" references="/0/generateSubMembers/%/%.16/%.7">
+      <details key="start" value="1737"/>
+      <details key="end" value="1754"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.88" references="/0/generateSubMembers/%/%.16/%.7/%">
+      <details key="start" value="1737"/>
+      <details key="end" value="1743"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.89" references="/0/generateSubMembers/%/%.16/%.7/%/m">
+      <details key="start" value="1737"/>
+      <details key="end" value="1738"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.90" references="/0/generateSubMembers/%/%.16/%.8">
+      <details key="start" value="1756"/>
+      <details key="end" value="1767"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.91" references="/0/generateSubMembers/%/%.16/%.9">
+      <details key="start" value="1768"/>
+      <details key="end" value="1779"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.92" references="/0/generateSubMembers/%/%.16/%.9/%">
+      <details key="start" value="1768"/>
+      <details key="end" value="1774"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.93" references="/0/generateSubMembers/%/%.16/%.9/%/m">
+      <details key="start" value="1768"/>
+      <details key="end" value="1769"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.94" references="/0/generateSubMembers/%/%.16/%.10">
+      <details key="start" value="1781"/>
+      <details key="end" value="1786"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.95" references="/0/generateSubMembers/%/%.16/%.11">
+      <details key="start" value="1787"/>
+      <details key="end" value="1796"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.96" references="/0/generateSubMembers/%/%.16/%.11/m">
+      <details key="start" value="1787"/>
+      <details key="end" value="1788"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.97" references="/0/generateSubMembers/%/%.16/%.12">
+      <details key="start" value="1798"/>
+      <details key="end" value="1799"/>
+      <details key="line" value="42"/>
+    </eAnnotations>
+    <eAnnotations source="positions.98" references="/0/generateSubMembers/%/%.16/%.13">
+      <details key="start" value="1801"/>
+      <details key="end" value="1804"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.99" references="/0/generateSubMembers/%/%.16/%.14">
+      <details key="start" value="1807"/>
+      <details key="end" value="1813"/>
+      <details key="line" value="42"/>
+    </eAnnotations>
+    <eAnnotations source="positions.100" references="/0/generateSubMembers/m">
+      <details key="start" value="1360"/>
+      <details key="end" value="1370"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>
